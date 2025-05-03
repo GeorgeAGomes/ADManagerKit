@@ -7,6 +7,12 @@
 
 import Foundation
 
-class ADManagerKit {
-	
+public class ADManagerKit {
+	public init() {
+
+	}
+
+	public func hello() -> String {
+		return "Hello, World!"
+	}
 }
