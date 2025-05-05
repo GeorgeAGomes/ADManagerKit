@@ -10,6 +10,11 @@ import ADManagerKit
 
 @main
 struct ExampleApp: App {
+
+	init() {
+		ADManagerKit().start(completionHandler: nil)
+	}
+
     var body: some Scene {
         WindowGroup {
             ContentView()

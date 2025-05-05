@@ -17,9 +17,6 @@ struct ContentView: View {
             Text("Hello, world!")
         }
         .padding()
-		.onAppear {
-			print(ADManagerKit().hello())
-		}
 	}
 }
 

@@ -8,3 +8,4 @@ DerivedData/
 .netrc
 
 /Example/Build
+config.xcconfig
