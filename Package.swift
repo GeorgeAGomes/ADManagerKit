@@ -29,7 +29,10 @@ let package = Package(
 		),
 		.testTarget(
 			name: "ADManagerKitTests",
-			dependencies: ["ADManagerKit"]
+			dependencies: [
+				"ADManagerKit",
+				.product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads")
+			]
 		),
 	]
 )
