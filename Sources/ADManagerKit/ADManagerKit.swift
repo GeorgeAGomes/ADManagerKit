@@ -16,12 +16,18 @@ public class ADManagerKit {
 
     /// Configures test device identifiers and starts the Google Mobile Ads SDK.
     /// - Parameter completionHandler: Optional callback invoked when initialization completes.
-    public func start(completionHandler: GADInitializationCompletionHandler?) {
+	@MainActor public func start(
+		completionHandler: GADInitializationCompletionHandler?
+	) {
 		guard let _ = Bundle.main.infoDictionary?["ADMOB_APP_ID"] as? String else {
 			fatalError("ADMOB_APP_ID is missing from Bundle")
 		}
 
-//        MobileAds.shared.start(completionHandler: completionHandler)
+        MobileAds.shared.start(completionHandler: completionHandler)
     }
+
+	public func registerTestDevice(_ identifier: String) {
+		MobileAds.shared.requestConfiguration.testDeviceIdentifiers = [identifier]
+	}
 }
 
