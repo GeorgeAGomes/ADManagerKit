@@ -12,7 +12,8 @@ import ADManagerKit
 struct ExampleApp: App {
 
 	init() {
-		ADManagerKit().start(completionHandler: nil)
+		ADManagerKit()
+			.start(completionHandler: nil)
 	}
 
     var body: some Scene {
@@ -20,5 +21,4 @@ struct ExampleApp: App {
             ContentView()
         }
     }
-		
 }
